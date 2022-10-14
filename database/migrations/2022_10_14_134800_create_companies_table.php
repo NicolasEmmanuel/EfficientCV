@@ -18,6 +18,8 @@ class CreateCompaniesTable extends Migration
 
             $table->string('name');
 
+            $table->foreignId('profile_id')->constrained()->cascadeOnDelete();
+
             $table->timestamps();
         });
     }
