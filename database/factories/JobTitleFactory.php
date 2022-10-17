@@ -14,7 +14,7 @@ class JobTitleFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name'=>$this->faker->jobTitle(),
         ];
     }
 }

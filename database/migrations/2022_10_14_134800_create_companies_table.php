@@ -14,11 +14,11 @@ class CreateCompaniesTable extends Migration
     public function up()
     {
         Schema::create('companies', function (Blueprint $table) {
+            
             $table->id();
 
             $table->string('name');
 
-            $table->foreignId('profile_id')->constrained()->cascadeOnDelete();
 
             $table->timestamps();
         });

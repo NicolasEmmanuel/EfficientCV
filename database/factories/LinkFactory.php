@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class LinkFactory extends Factory
@@ -14,7 +15,8 @@ class LinkFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'token'=>Str::random(),
+            'template'=>'example',
         ];
     }
 }
