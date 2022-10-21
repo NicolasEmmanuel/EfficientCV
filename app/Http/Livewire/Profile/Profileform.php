@@ -1,23 +1,17 @@
+
 <?php
-
-namespace App\Http\Livewire\Profile;
-
-use App\Models\Profile;
+ 
+namespace App\Http\Livewire;
+ 
+use Filament\Forms;
+use Illuminate\Contracts\View\View;
 use Livewire\Component;
-use Forms\Contracts\HasForms;
-use Forms\Concerns\InteractsWithForms;
-
-class Profileform extends Component implements HasForms 
+ 
+class Profileform extends Component implements Forms\Contracts\HasForms 
 {
-    use InteractsWithForms; 
-
-    public function mount(Profile $profile):void{
-
-        $this->biography = $profile->biography;
-
-    }
-
-    public function render()
+    use Forms\Concerns\InteractsWithForms; 
+ 
+    public function render(): View
     {
         return view('livewire.profile.profileform');
     }
